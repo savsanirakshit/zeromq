@@ -21,10 +21,10 @@ public class ZeromqClient
         ZMQ.Socket socket = context.createSocket(ZMQ.SUB);
 
         // Connect the socket to the publisher address
-        socket.connect("tcp://172.16.9.106:9559");
+        socket.connect("tcp://localhost:9559");
 
         // Subscribe to messages with the "topic" topic
-        socket.subscribe("ERwcDME1".getBytes());
+        socket.subscribe("topic".getBytes());
 
         // Receive messages
         while (true) {
